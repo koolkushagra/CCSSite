@@ -7,13 +7,14 @@
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
 	<style>
 		body 		{ padding-top:80px; word-wrap:break-word; }
+		.main-page {text-align: center}
 	</style>
 </head>
 <body>
 <div class="container">
 
 	<div class="page-header text-center">
-		<h1><span class="fa fa-anchor"></span> Profile Page</h1>
+		<h1><span class="fa fa-anchor"></span>DashBoard</h1>
 		<a href="/logout" class="btn btn-default btn-sm">Logout</a>
 		<a href="/edit" class="btn btn-default btn-sm">Edit Profile</a>
 	</div>
@@ -23,9 +24,9 @@
 
 
 		<!-- FACEBOOK INFORMATION -->
-		<div class="col-sm-6">
-			<div class="well">
-				<h3 class="text-primary"><span class="fa fa-facebook"></span> Facebook</h3>
+		<div class="col-md-6">
+			<div class="well main-page">
+				<h3 class="text-default"><span class="fa fa-anchor"></span>Your Info</h3>
 
 					<p>
 						<img src="<%=user.fb.photo%>"><br>
@@ -38,7 +39,16 @@
 
 			</div>
 		</div>
-
+		<div class="col-md-6">
+			<div class="well main-page">
+				<h3>Techical Quiz</h3>
+				<button name="Take It!" >Take It!!</button>
+				<h3>Management Quiz</h3>
+				<button name="Take It!" >Take It!!</button>
+				<h3>Creativity Quiz</h3>
+				<button name="Take It!">Take It!!</button>
+			</div>
+		</div>
 	</div>
 
 </div>

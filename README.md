@@ -1,6 +1,8 @@
 # CCSSite
-Core Committe Selection Site
+Core Committee Selection Site
 
-npm install at root to install
+    npm install
+at root to install
 
-npm start at root to start server
+    npm start
+at root to start server
