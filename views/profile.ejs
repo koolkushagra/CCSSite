@@ -15,6 +15,7 @@
 	<div class="page-header text-center">
 		<h1><span class="fa fa-anchor"></span> Profile Page</h1>
 		<a href="/logout" class="btn btn-default btn-sm">Logout</a>
+		<a href="/edit" class="btn btn-default btn-sm">Edit Profile</a>
 	</div>
 
 	<div class="row">
@@ -27,11 +28,12 @@
 				<h3 class="text-primary"><span class="fa fa-facebook"></span> Facebook</h3>
 
 					<p>
+						<img src="<%=user.fb.photo%>"><br>
 						<strong>id</strong>: <%= user.fb.id %><br>
-						<strong>token</strong>: <%= user.fb.access_token %><br>
 						<strong>email</strong>: <%= user.fb.email %><br>
-						<strong>name</strong>: <%= user.fb.firstName%>
-						<img src="<%=user.fb.photo%>">
+						<strong>name</strong>: <%= user.fb.firstName%> <%=user.fb.lastName%><br>
+						<strong>Phone No</strong>: <%=user.phone_no%>
+
 					</p>
 
 			</div>
