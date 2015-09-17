@@ -12,7 +12,7 @@ module.exports = function(passport) {
 
     function(access_token, refresh_token, profile, done) {
 
-    	console.log('profile', profile);
+  //  	console.log('profile', profile);
 
 
 		process.nextTick(function() {

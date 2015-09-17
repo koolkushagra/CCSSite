@@ -12,9 +12,7 @@ var isAuthenticated = function (req, res, next) {
   res.redirect('/');
 };
 
-var isFirstTime = function (req, res, next) {
 
-};
 
 module.exports = function(passport){
 
@@ -27,7 +25,7 @@ module.exports = function(passport){
   router.get('/home', isAuthenticated, function(req, res){
     console.log(req.user.phone_no);
     if(req.user.phone_no != undefined)
-    res.render('profile.ejs', { user: req.user });
+    res.render('profile.ejs', { user: req.user, message: req.flash('message') });
   else
     res.redirect('/first-time');
   });
@@ -37,7 +35,7 @@ module.exports = function(passport){
   });
 
   router.post('/first-time', isAuthenticated, function(req,res){
-      console.log(req.body);
+      //console.log(req.body);
       process.nextTick(function(){
         User.findById(req.user._id, function(err, user){
           if(err){
@@ -47,15 +45,38 @@ module.exports = function(passport){
           user.save();
         });
       });
-      console.log(req.user.phone_no);
+    //  console.log(req.user.phone_no);
       req.flash('message','Successfully Signed in, Log in to Continue');
       res.redirect('/');
+  });
+
+  router.get('/edit',isAuthenticated, function(req, res) {
+    res.render('edit.ejs', {email: req.user.fb.email, phone: req.user.phone_no});
+  });
+
+  router.post('/edit', function(req,res){
+    process.nextTick(function(){
+      User.findById(req.user._id, function(err, user){
+        if(err){
+          res.send(err);
+        }
+        user.phone_no = req.body.phone_no;
+        user.fb.email = req.body.email;
+        user.save();
+      });
+      req._passport.session.user.phone_no = req.body.phone_no;
+      req._passport.session.user.email = req.body.email;
+    });
+    req.flash('message', '1');
+    res.redirect('/home');
   });
 
   router.get('/logout', function(req, res) {
     req.logout();
     res.redirect('/');
   });
+
+
 
   router.get('/login/facebook',
       passport.authenticate('facebook',  { scope: [ 'email' ] } ));

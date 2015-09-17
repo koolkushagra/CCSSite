@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <titlePre-Question</title>
+  <title>Pre-Question</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -14,21 +14,26 @@
   <div class="jumbotron">
     <h1>Questions Page:</h1>
     <div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="70"
-  aria-valuemin="0" aria-valuemax="100" style="width:10%">
-    Day 1
+  <div class="progress-bar" role="progressbar"
+  aria-valuemin="0" aria-valuemax="30" style="width:<%=q_no/30*100%>%">
+    Day <%=q_no%>
   </div>
 </div>
   </div>
   <div class="row">
-    <div class="col-sm-4">
-      <h3>Question 1:</h3>
-     <div class="form-group">
-  <label for="Answer">Answer:</label>
-  <textarea class="form-control" rows="5" id="comment"></textarea>
-</div>
-        <button type="button" class="btn btn-primary">Submit</button>
-    </div>
+
+    <div class = "jumbotron text-center">
+    <form action="/pre-quiz" method="post">
+      <div class="form-group">
+      <h3>Question: <%=q_stat%></h3>
+
+      <label for="answer">Answer</label>
+      <input type="text" id="answer" name="answer"><br>
+
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
 
   </div>
 </div>

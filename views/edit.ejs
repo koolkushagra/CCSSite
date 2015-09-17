@@ -12,14 +12,14 @@
 <h1>Edit Your Details</h1>
 <div class="container">
   <div class = "jumbotron text-center">
-  <form action="/first-time" method="post">
+  <form action="/edit" method="post">
     <div class="form-group">
 
 		<label for="email">Email</label>
-		<input type="text" id="email" ><br>
+		<input type="text" id="email" name="email" value = "<%=email%>"><br>
 
 		<label for="pno">Phone Number</label>
-		<input type="text" id="pno" ><br>
+		<input type="text" id="pno" name="phone_no" value="<%=phone%>"><br>
 
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>

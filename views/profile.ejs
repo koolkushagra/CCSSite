@@ -19,6 +19,16 @@
 		<a href="/edit" class="btn btn-default btn-sm">Edit Profile</a>
 	</div>
 
+	<%if(message == 1){%>
+	<div class="alert alert-success" role="alert">
+		Profile updated. Changes will be reflected shortly.
+	</div>
+	<%}%>
+	<%if(message == 2){%>
+	<div class="alert alert-success" role="alert">
+		Correct!!!
+	</div>
+	<%}%>
 	<div class="row">
 
 
@@ -47,6 +57,8 @@
 				<button name="Take It!" >Take It!!</button>
 				<h3>Creativity Quiz</h3>
 				<button name="Take It!">Take It!!</button>
+				<h3>PreQuestion</h3>
+				<a href="/pre-quiz" class="btn btn-default">Take It!!</a>
 			</div>
 		</div>
 	</div>
