@@ -48,9 +48,9 @@ passport_fb(passport);
 
 
 var routes = require('./routes/index')(passport);
-var prequiz = require('./routes/pre-quiz');
+//var prequiz = require('./routes/pre-quiz');
 
-app.use('/pre-quiz', prequiz);
+//app.use('/pre-quiz', prequiz);
 app.use('/', routes);
 
 // catch 404 and forward to error handler
