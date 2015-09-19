@@ -10,28 +10,52 @@
     <link rel="font" href="/stylesheets/ionicons.min.css">
 </head>
 <body>
+    
+<div id="typeface">
+    <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 center">
+        <img src="/media/typeface9.png">    
+    </div>
+    </div>
+</div>
 
-<<<<<<< HEAD
  <div id="home_welcome">
         <div class="container">
             <div class="row center">
                 <div class="col-lg-12 col-md-12 col-sm-12">
-                    <h1>You can surely thank us later <br>for making your day better.</h1>
-                    <p>We wish you the best</p>
-=======
-	<div class="jumbotron text-center">
-		<h1><span class="fa fa-anchor"></span> Core Committee Selection</h1>
->>>>>>> origin/master
+                    <p>You can surely thank us later <br>for making your day better.</p>
+                    <h4>Here is your chance to join us!</h4>
+                 
+<svg viewBox="0 0 800 600">
+  <symbol id="s-text">
+    <text text-anchor="middle" x="50%" y="10%" class="text--line center">
+      Core Committee 
+    </text>
+     <text text-anchor="middle" x="50%" y="20%" class="text--line2 center">
+      Selections
+    </text>
+  </symbol>
 
-		              <%if(message.length != 0){%>
-		              <div class="alert alert-success" role="alert">
-
-		              </div>
-		              <%}%>
+  <g class="g-ants">
+    <use xlink:href="#s-text" class="text-copy"></use>
+    <use xlink:href="#s-text" class="text-copy"></use>
+    <use xlink:href="#s-text" class="text-copy"></use>
+    <use xlink:href="#s-text" class="text-copy"></use>
+    <use xlink:href="#s-text" class="text-copy"></use>
+  </g>
+</svg>
         <div class="login">
-		<p>SignIn or SignUp:</p>
+		<h3>SignIn or SignUp:</h3>
         <a href="/login/facebook" title="" target="_blank"><i class="ion-social-facebook"></i></a>
         </div>
+                 <!--   <h2 class="elegantshadow">Core Committee Selections</h2>  -->
+                    
+		              <%if(message.length != 0){%>
+		              <div class="alert alert-success" role="alert">
+                        <p>Bravo! you are on the list.</p>
+		              </div>
+		              <%}%>
+
                     </div>
 	       </div>
         </div>
