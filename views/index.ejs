@@ -5,27 +5,31 @@
 	<title>CCSSite</title>
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
-	<style>
-		body 		{ padding-top:80px; }
-	</style>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="/fonts/font-awesome/css/font-awesome.css">
+    <link rel="font" href="/stylesheets/ionicons.min.css">
 </head>
 <body>
-<div class="container">
 
-	<div class="jumbotron text-center">
-		<h1><span class="fa fa-lock"></span> Core Committee Selection</h1>
+ <div id="home_welcome">
+        <div class="container">
+            <div class="row center">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <h1>You can surely thank us later <br>for making your day better.</h1>
+                    <p>We wish you the best</p>
 
-		<%if(message.length != 0){%>
-		<div class="alert alert-success" role="alert">
-			You have successfully signed up. Log in again to continue.
-		</div>
-		<%}%>
+		              <%if(message.length != 0){%>
+		              <div class="alert alert-success" role="alert">
 
-		<p>Login or Register with:</p>
-
-		<a href="/login/facebook" class="btn btn-primary"><span class="fa fa-facebook"></span> Facebook</a>
-	</div>
-
+		              </div>
+		              <%}%>
+        <div class="login">
+		<p>SignIn or SignUp:</p>
+        <a href="/login/facebook" title="" target="_blank"><i class="ion-social-facebook"></i></a>
+        </div>
+                    </div>
+	       </div>
+        </div>
 </div>
 </body>
 </html>
