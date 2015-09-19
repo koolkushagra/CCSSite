@@ -18,6 +18,8 @@ module.exports = function(passport){
 
   /* GET login page. */
   router.get('/', function(req, res) {
+    if(req.isAuthenticated())
+      res.redirect('/home');
     res.render('index.ejs', { message: req.flash('message') });
   });
 
@@ -36,12 +38,15 @@ module.exports = function(passport){
 
   router.post('/first-time', isAuthenticated, function(req,res){
       //console.log(req.body);
+      if(req.user.phone_no != undefined)
+        res.redirect('/');
       process.nextTick(function(){
         User.findById(req.user._id, function(err, user){
           if(err){
             res.send(err);
           }
           user.phone_no = req.body.phone_no;
+          user.reg_no = req.body.reg_no;
           user.save();
         });
       });

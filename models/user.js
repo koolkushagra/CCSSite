@@ -12,5 +12,5 @@ module.exports = mongoose.model('User',{
 		photo: String
 	},
 	phone_no: String,
-	doneFortheDay: {type: Boolean, default: false}
+	reg_no: String
 });
