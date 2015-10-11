@@ -4,27 +4,46 @@
   <title>Edit-CCSSite</title>
   	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
   	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+        <!--stylesheets-->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="/fonts/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/stylesheets/ionicons.min.css">
+
   	<style>
   		body 		{ padding-top:80px; }
   	</style>
 </head>
-<body>
-<h1>Edit Your Details</h1>
-<div class="container">
-  <div class = "jumbotron text-center">
-  <form action="/edit" method="post">
-    <div class="form-group">
+<body id="home_edit">
+    <div class="row">
 
-		<label for="email">Email</label>
-		<input type="text" id="email" name="email" value = "<%=email%>"><br>
-
-		<label for="pno">Phone Number</label>
-		<input type="text" id="pno" name="phone_no" value="<%=phone%>"><br>
-
+    <div class="col-md-12">
+    <h1>Edit Your Details</h1>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-</div>
-</div>
+    <div class="container">
+        <div class = "jumbotron text-center">
+             <form action="/edit" method="post">
+                <div class="form-group">
+
+                   <!-- <label for="email">e-mail</label>
+                    <input type="text" id="email" name="email" value = "<%=email%>"><br>
+
+                    <label for="pno">Contact no.</label>
+                    <input type="text" id="pno" name="phone_no" value="<%=phone%>"><br>   -->
+
+                      <div class="question" id="email">
+                          <input type="text" name="email" value = "<%=email%>" required/>
+                          <label for="email" >Email Address</label>
+                      </div>
+                      <div class="question" id="pno">
+                          <input type="text" name="phone_no" value = "<%=phone%>" required/>
+                          <label for="pno">Contact no.</label>
+                      </div>
+
+                </div>
+                    <button type="submit">Edit Profile</button>
+            </form>
+        </div>
+     </div>
+     </div>
 </body>
 </html>

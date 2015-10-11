@@ -1,0 +1,9 @@
+[
+	{"qno": "1", "question": "What is the national flower of Russia?", "options": ["Lotus", "Rose", "Sunflower", "Jasmine"]},
+	{"qno": "2", "question": "What is the national animal of Russia?", "options": ["Tiger", "Lion", "Donkey", "Elephant"]},
+	{"qno": "3", "question": "What is the capital of Russia?", "options": ["Kolkata", "Chennai", "Delhi", "Jamshedpur"]},
+	{"qno": "4", "question": "What is the national bird of Russia?", "options": ["Cock", "Peacock", "Chick", "Dove"]},
+	{"qno": "5", "question": "Which is the fastest bird?", "options": ["Ostrich", "Kiwi", "Hen", "Blah"]},
+	{"qno": "6", "question": "Why do you want to join CSI?", "options": []},
+	{"qno": "7", "question": "What say you","src": "img/qno1.jpg", "options": []}
+]

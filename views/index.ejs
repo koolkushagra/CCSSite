@@ -2,19 +2,24 @@
 <!doctype html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<title>CCSSite</title>
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="stylesheet" type="text/css" href="/fonts/font-awesome/css/font-awesome.css">
-    <link rel="font" href="/stylesheets/ionicons.min.css">
+    <link rel="stylesheet" href="/stylesheets/ionicons.min.css">
+
+    <script src="js/modernizr.custom.js"></script>
+
 </head>
 <body>
-    
+
 <div id="typeface">
     <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12 center">
-        <img src="/media/typeface9.png">    
+        <img src="/media/typeface9.png">
     </div>
     </div>
 </div>
@@ -25,40 +30,44 @@
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <p>You can surely thank us later <br>for making your day better.</p>
                     <h4>Here is your chance to join us!</h4>
-                 
-<svg viewBox="0 0 800 600">
-  <symbol id="s-text">
-    <text text-anchor="middle" x="50%" y="10%" class="text--line center">
-      Core Committee 
-    </text>
-     <text text-anchor="middle" x="50%" y="20%" class="text--line2 center">
-      Selections
-    </text>
-  </symbol>
-
-  <g class="g-ants">
-    <use xlink:href="#s-text" class="text-copy"></use>
-    <use xlink:href="#s-text" class="text-copy"></use>
-    <use xlink:href="#s-text" class="text-copy"></use>
-    <use xlink:href="#s-text" class="text-copy"></use>
-    <use xlink:href="#s-text" class="text-copy"></use>
-  </g>
-</svg>
+            <div class="row">
+            <div class="col-md-12">
+            <div class="container committee">
+            <div class="os-phrases" id="os-phrases"><!-- /rashgold -->
+				<h2>It's time </h2>
+				<h2>to awake </h2>
+				<h2>the monster-genius</h2>
+				<h2>in you.</h2>
+				<h2>Get  set!</h2>
+				<h2>This is</h2><!-- /rashgold -->
+				<h2>Core Committee Selections'15</h2>
+				<h2>Refresh to replay</h2>
+			</div>
+            </div>
+            </div>
+            </div>
         <div class="login">
-		<h3>SignIn or SignUp:</h3>
-        <a href="/login/facebook" title="" target="_blank"><i class="ion-social-facebook"></i></a>
+		<h3>Sign-In / Sign-Up:</h3>
+        <a href="/login/facebook" title="" target="_blank"><i class="fa fa-facebook"></i></a>
         </div>
                  <!--   <h2 class="elegantshadow">Core Committee Selections</h2>  -->
                     
-		              <%if(message.length != 0){%>
-		              <div class="alert alert-success" role="alert">
-                        <p>Bravo! you are on the list.</p>
-		              </div>
-		              <%}%>
 
                     </div>
 	       </div>
         </div>
 </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><!-- /rashgold -->
+		<script src="js/jquery.lettering.js"></script>
+    <script>
+	/*rashgold*/
+		$(document).ready(function() {
+				$("#os-phrases > h2").lettering('words').children("span").lettering().children("span").lettering();
+			})
+	</script>
+
+
+    <script src="/stylesheets/style.js"></script>
+
 </body>
 </html>
