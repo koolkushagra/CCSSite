@@ -46,4 +46,29 @@
      </div>
      </div>
 </body>
+<script>
+    function phonenumber(phone)
+    {
+          var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+          if((phone.value.match(phoneno))
+                  {
+                  return true;
+                    }
+             else
+                {
+                    alert("Please enter a valid phone number");
+                    return false;
+                    }
+        }
+    function ValidateEmail(email)
+    {
+         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value))
+         {
+                return (true)
+              }
+           alert("You have entered an invalid email address!")
+            return (false)
+        }
+
+</script>
 </html>
