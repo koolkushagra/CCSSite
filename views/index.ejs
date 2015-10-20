@@ -3,7 +3,9 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
 	<title>CCSSite</title>
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
@@ -12,6 +14,23 @@
     <link rel="stylesheet" href="/stylesheets/ionicons.min.css">
 
     <script src="js/modernizr.custom.js"></script>
+    
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#home_welcome').addClass("hidden");
+
+        $('.login').hover(function() {
+            var $this = $(this);
+
+            if ($this.hasClass("hidden")) {
+                $(this).removeClass("hidden").addClass("visible");
+
+            } else {
+                $(this).removeClass("visible").addClass("hidden");
+            }
+        });
+    });
+</script>
 
 </head>
 <body>
@@ -19,44 +38,43 @@
 <div id="typeface">
     <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12 center">
-        <img src="/media/typeface9.png">
+        <img class="logo" src="/images/typeface_csi.png">
     </div>
     </div>
 </div>
 
  <div id="home_welcome">
         <div class="container">
+            <div class="text_container">
             <div class="row center">
                 <div class="col-lg-12 col-md-12 col-sm-12">
-                    <p>You can surely thank us later <br>for making your day better.</p>
-                    <h4>Here is your chance to join us!</h4>
-            <div class="row">
+                    <p class="line1">You can surely thank us later <br>for making your day better.</p>
+                    <h4 class="line2">Here is your chance to join us!</h4>
+                </div>
+            </div>
+            
             <div class="col-md-12">
-            <div class="container committee">
-            <div class="os-phrases" id="os-phrases"><!-- /rashgold -->
-				<h2>It's time </h2>
-				<h2>to awake </h2>
-				<h2>the monster-genius</h2>
-				<h2>in you.</h2>
-				<h2>Get  set!</h2>
-				<h2>This is</h2><!-- /rashgold -->
-				<h2>Core Committee Selections'15</h2>
-				<h2>Refresh to replay</h2>
-			</div>
+				<h1 class="ccs">Core Committee Selections</h1>
             </div>
             </div>
-            </div>
+            <div class="hide2">
+            </div>        
         <div class="login">
 		<h3>Sign-In / Sign-Up:</h3>
-        <a href="/login/facebook" title="" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a class="fb" href="/login/facebook" title="" target="_blank">Facebook</a>
         </div>
+     <div class="bg bg-1">
+            
+            </div>
+            <div class="bg bg-2">
+            <canvas></canvas>
+            </div> 
                  <!--   <h2 class="elegantshadow">Core Committee Selections</h2>  -->
-                    
-
                     </div>
-	       </div>
-        </div>
-</div>
+                    </div>
+    
+
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><!-- /rashgold -->
 		<script src="js/jquery.lettering.js"></script>
     <script>
@@ -66,7 +84,7 @@
 			})
 	</script>
 
-
+    <script src="/media_js/lib1.js"></script>
     <script src="/stylesheets/style.js"></script>
 
 </body>

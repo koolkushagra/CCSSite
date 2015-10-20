@@ -4,23 +4,38 @@
   <title>CCSSite</title>
   	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
   	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+            <!--stylesheets-->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="/fonts/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/stylesheets/ionicons.min.css">
+    
+    
   	<style>
-  		body 		{ padding-top:80px; }
+  		body 		{ padding-top:120px; }
   	</style>
 </head>
-<body>
+<body id="new_form">
+ 
 <div class="container">
-  <div class = "jumbotron text-center">
+  <div class = "text-center">
   <form action="/first-time" method="post">
     <div class="form-group">
-      <label for="inputPhoneNo">Phone Number</label>
-          <input type="number" class="form-control" id="inputPhone" placeholder="PhoneNo" name="phone_no">
-      <label for="inputRegNo">Registration Number</label>
-        <input type="text" class= "form-control" id= "inputRegNo" placeholder="RegNo" name="reg_no">
+        <div id="email">
+         
+          <input type="text" class="form_fill blink" id="inputPhone" placeholder="PhoneNo" name="phone_no">
+            </div>
+         <div id="email">
+        <input type="text" class= "form_fill" id= "inputRegNo" placeholder="RegNo" name="reg_no">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    <button type="submit">Submit</button>
+
   </form>
 </div>
 </div>
+        
+    <script src="/media_js/lib1.js"></script>
+    <script src="/stylesheets/style.js"></script>
+    
 </body>
 </html>
