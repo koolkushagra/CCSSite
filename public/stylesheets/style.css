@@ -241,11 +241,11 @@ div.infinite_roll{
 }
 
 .dp{
-    opacity: 1;
-    width: 270px;
+    z-index: -10;
+    opacity: 0;
+    width: 180px;
     height: auto;
     padding-left: 0px;
-
 }
 
 .profile_nav{
@@ -283,7 +283,7 @@ div.infinite_roll{
   height: 1px;
   bottom: 0;
   left: 0;
-  background-color: #000;
+  background-color: #f23b66;
   visibility: hidden;
   -webkit-transform: scaleX(100%);
   transform: scaleX(0);
@@ -317,14 +317,57 @@ div.infinite_roll{
 }
 
 .category_nav li{
-    font-size: 30px;
+    font-size: 40px;
     display: inline-block;
     padding-top: 10px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 90px;
+    padding-right: 90px;
     font-style: oblique;
 }
 
+
+#home_profile.bb {
+  z-index: 100;
+  width: 255px;
+  height: 255px;
+  margin: auto;
+  color: #69ca62;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 1);
+}
+
+#home_profile.bb::before, #home_profile.bb::after {
+  content: '';
+  z-index: 10;
+  margin: 5%;
+  box-shadow: inset 0 0 0 2px;
+  animation: clipMe 8s linear infinite;
+}
+#home_profile.bb::before {
+  animation-delay:1s;
+}
+#home_profile.bb:hover::after, #home_profile.bb:hover::before {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes clipMe {
+  0%, 100% {
+    clip: rect(0px, 220.0px, 2px, 0px);
+  }
+  25% {
+    clip: rect(0px, 2px, 220.0px, 0px);
+  }
+  50% {
+    clip: rect(218.0px, 220.0px, 220.0px, 0px);
+  }
+  75% {
+    clip: rect(0px, 220.0px, 220.0px, 218.0px);
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 /*====Edit info====
 #home_edit .jumbotron{
     background: #fff;
