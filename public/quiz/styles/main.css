@@ -1,3 +1,7 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,200);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400);
+
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -22,6 +26,7 @@ body {
   border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
 }
+
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
   margin-top: 0;
@@ -46,6 +51,7 @@ body {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
 }
+
 .jumbotron .btn {
   font-size: 21px;
   padding: 14px 24px;
@@ -55,6 +61,7 @@ body {
 .marketing {
   margin: 40px 0;
 }
+
 .marketing p + h4 {
   margin-top: 28px;
 }
@@ -72,10 +79,12 @@ body {
     padding-left: 0;
     padding-right: 0;
   }
+    
   /* Space out the masthead */
   .header {
     margin-bottom: 30px;
   }
+    
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
@@ -86,6 +95,20 @@ body {
 .buttonDone {
     background-color: #455a64;
 }
+
 .buttonNotDone {
   
+}
+
+.ques_head{
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.ques_head{
+    text-align: center;
+    font-style: Raleway, Open Sans, sans-serif;
+    color: #f23b66;
+    font-weight: 600;
+    
 }

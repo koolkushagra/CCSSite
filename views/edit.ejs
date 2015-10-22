@@ -10,33 +10,34 @@
     <link rel="stylesheet" href="/stylesheets/ionicons.min.css">
 
   	<style>
-  		body 		{ padding-top:80px; }
+  		body 		{ padding-top:120px; }
   	</style>
 </head>
 <body id="home_edit">
     <div class="row">
 
-    <div class="col-md-12">
-    <h1>Go on! Edit your details here</h1>
-    </div>
     <div class="container">
         <div class = "text-center">
              <form action="/edit" method="post">
                 <div class="form-group">
-
-        
-
-                      <div class="question" id="email">
-                          <input type="text" name="email" value = "<%=email%>" required/>
-                          <label for="email" >Email Address</label>
+                      <div class="blink" id="email">
+                          <input class="form_fill"  type="text" name="email" autofocus="true" value = "<%=email%>" required/>
+                         
                       </div>
                       <div class="question" id="pno">
-                          <input type="text" name="phone_no" value = "<%=phone%>" required/>
-                          <label for="pno">Contact no.</label>
+                          <input class="form_fill"  type="number" name="phone_no" value = "<%=phone%>" required/>
+                          
                       </div>
-
                 </div>
-                    <button type="submit">Edit Profile</button>
+                 
+                 <div class="row">
+                 <div class="col-md-6">
+                     <p>I have edited my information</p>
+                 </div>
+                 <div class="col-md-6 left"> 
+                 <button class="anchor_submit" type="submit"> ></button>
+                 </div>
+                 </div>  
             </form>
         </div>
      </div>

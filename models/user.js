@@ -11,6 +11,7 @@ module.exports = mongoose.model('User',{
 		display_name: String,
 		photo: String
 	},
+
 	phone_no: String,
 	reg_no: String,
 	tech_taken: {type:Boolean, default: false},

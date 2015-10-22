@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+  <title>CCSSite</title>
+ <!-- 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">  
+  	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> -- load fontawesome -->
+    
+    <link rel="stylesheet" href="public/stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="public/stylesheets/bootstrap-theme.css">
+            <!--stylesheets-->
+    <link rel="stylesheet" href="public/stylesheets/reg_style.css">
+    <link rel="stylesheet" type="text/css" href="public/fonts/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="public/stylesheets/ionicons.min.css">
+    
+    
+  	<style>
+  		body{ padding-top:40px; }
+  	</style>
+
+    
+</head>
+<body id="new_form">
+<div class="container">
+<div class = "row">
+    <div class="col-lg-6 col-md-6 col-sm-6">
+        
+    <div class="sign_in">
+    <h1>Login</h1>    
+    </div>
+        
+      <form action="/first-time" method="post">
+        <div class="form-group">
+        <div id="email" class="blink">
+        <input type="number" class="form-control" id="inputPhone" autofocus="true" placeholder="Phone no." name="phone_no">
+        </div>
+        <div id="email">
+        <input type="text" class= "form-control" id= "inputRegNo" placeholder="Registration no." name="reg_no">
+        </div>
+    </div>
+
+        <div class="row">
+        <div class="col-md-6">
+        <p>I am ready to register now</p>
+        </div>
+                 
+                 
+        <div class="col-md-6 left">
+        <button class="anchor_submit" type="submit"> ></button>
+        </div>
+        </div>  
+     </form>
+    </div>
+    
+    <div class="col-lg-6 col-md-6 col-sm-6">
+      <form id="login-form" class="form" action="#" method="POST" role="form">
+								<div class="form-group">
+										<label class="form-label" for="name">Name</label>
+										<input type="text" class="form-control" id="name" autofocus="true" name="name" placeholder="Name" tabindex="1" required>
+								</div>
+								<div class="form-group">
+										<label class="form-label" for="regno">Registration number</label>
+										<input type="text" class="form-control" id="name" name="name" placeholder="Registration number" tabindex="1" required>
+								</div>
+								<div class="form-group">
+										<label class="form-label" for="email">Email</label>
+										<input type="email" class="form-control" id="email" name="email" placeholder="Email" tabindex="2" required>
+								</div>
+								<div class="form-group">
+										<label class="form-label" for="password">Password</label>
+										<input type="password" class="form-control" id="passoword" name="password" placeholder="Password" tabindex="3" required>
+								</div>
+								<div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-3 col-sm-6"></div>
+                                    </div>
+									<input id='agree_m' name='agree' type='checkbox'>
+                                    <label for='agree'>Male</label>
+                                    <input id='agree_f' name='agree' type='checkbox'>
+                                    <label for='agree'>Female</label>
+								</div>
+								<div class="form-group">
+										<label class="form-label" for="info1"></label>
+										 <textarea name="message" placeholder="Tell us" rows="5" cols="75">
+</textarea>
+								</div>
+								<div class="form-group">
+										<label class="form-label" for="info2"></label>
+										 <textarea name="message" placeholder="Tell us" rows="5" cols="75">
+</textarea>
+								</div>
+								<div class="form-group">
+										<label class="form-label" for="info3"></label>
+										 <textarea name="message" placeholder="Tell us" rows="5" cols="75">
+</textarea>
+								</div>
+								<div class="text-center">
+										<button type="submit" class="btn btn-start-order">Register</button>
+								</div>
+						</form>
+    </div>
+
+</div>
+</div>
+    
+    
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="public/stylesheets/reg_style.js"></script>
+    <script src="public/media_js/bootstrap.js"></script>
+</body>
+</html>

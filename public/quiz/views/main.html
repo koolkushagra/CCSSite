@@ -27,7 +27,7 @@
         </div>
         <img src="{{currentQuestion.src}}"/>
         <div ng-show="!currentQuestion.options.length"><textarea class="form-control" ng-model="currentQuestion.answer" rows="5" placeholder="Enter your answer here..."></textarea></div>
-        <div ng-show="currentQuestion.options.length">You have selected: {{currentQuestion.answer}}</div>
+        <div ng-show="currentQuestion.options.length">Are you sure to lock?: {{currentQuestion.answer}}</div>
       </div>
       <div class="panel-footer">
         <a class="btn btn-primary" role="button" ng-click="selectQuestion(currentQuestionNumber-1);">Previous</a>

@@ -85,8 +85,8 @@ module.exports = function(passport){
   });
 
   router.get('/quiz/tech',isAuthenticated, function(req,res){
-    if(req.user.tech_taken == false)
-    {
+  //  if(req.user.tech_taken == false)
+  //  {
     process.nextTick(function(){
       User.findById(req.user._id, function(err, user){
         if(err)
@@ -98,10 +98,10 @@ module.exports = function(passport){
     });
     req.session.f_type = 1;
     res.render('quiz.ejs');
-  }
-  else{
-    res.redirect('/');
-  }
+//  }
+//  else{
+//    res.redirect('/');
+//  }
   });
 
   router.get('/quiz/mang',isAuthenticated, function(req,res){

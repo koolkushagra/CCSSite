@@ -15,7 +15,7 @@ angular.module('testApp')
     $scope.percentAnswered = $scope.attemptedQuestions/$scope.totalQuestions*100 + '%';
     $scope.currentQuestionNumber = 0;
     $scope.$route = $route;
-    
+
     $scope.questionPaper = [];
     $scope.currentQuestion = [];
 

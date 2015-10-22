@@ -76,13 +76,13 @@ a, u, li{
 }
 
 .bg-1 {
-  background-image: url("../images/bg_test1a.png");
-  background-color: #202544;
+  background-image: url("../images/ccs_home_bg1.png");
+  background-color: #fff;
   opacity: 1;
 }
 
 .bg-2 {
-  background-image: url("../images/bg_test2.png");
+  background-image: url("../images/ccs_home_bg2.png");
   opacity: 0;
 }
 
@@ -133,7 +133,7 @@ a {
 }
 
 a:hover {
-	color: #fff;
+	color: #00ceea;
 }
 
 .fb{
@@ -171,7 +171,7 @@ a:hover {
 .visible{
     display: inherit;
 }
-/* Header Style */
+
 
 
 
@@ -191,7 +191,7 @@ a:hover {
   z-index: -10;
   background-size: cover;
   position: absolute;
-    background-color: #202544;
+    background-color: #fff;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -211,8 +211,8 @@ div.infinite_roll{
   width: 100%;
   height: 100%;
   overflow: hidden;
-  opacity: 0.8;
-  background-image: url("../images/bg_scroll.png");
+  opacity: 0.7;
+  background-image: url("../images/dash_bg_scroll.png");
   -webkit-animation: scrollBg 20s linear infinite;
   animation: scrollBg 20s linear infinite;
   background-size: cover;
@@ -242,14 +242,14 @@ div.infinite_roll{
 
 .dp{
     z-index: -10;
-    opacity: 0;
-    width: 180px;
+    opacity: 1;
+    width: 260px;
     height: auto;
     padding-left: 0px;
 }
 
 .profile_nav{
-    color: #d8d8d8;
+    color: #004daa;
     font-size: 25px;
     text-align: left;
     padding-top: 10px;
@@ -273,7 +273,7 @@ div.infinite_roll{
 }
 
 #home_profile a:hover{
-      color: #fff;
+      color: #00ceea;
 }
 
 #home_profile a:before{
@@ -304,6 +304,14 @@ div.infinite_roll{
     text-transform: uppercase;
 }
 
+.alert{
+    background: transparent;
+    font-family: Raleway, Open Sans;
+    font-size: 20px;
+    color: #202544;
+    border: none;
+    
+}
 
 .strike{
     cursor: pointer;
@@ -312,7 +320,7 @@ div.infinite_roll{
 .dashboard_nav li{
     font-family: Raleway;
     font-size: 20px;
-    color: #a0a0a0;
+    color: #004daa;
     display: inline-block;
 }
 
@@ -335,17 +343,17 @@ div.infinite_roll{
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 1);
 }
 
-#home_profile.bb::before, #home_profile.bb::after {
+.bb::before,.bb::after {
   content: '';
   z-index: 10;
   margin: 5%;
   box-shadow: inset 0 0 0 2px;
   animation: clipMe 8s linear infinite;
 }
-#home_profile.bb::before {
+.bb::before {
   animation-delay:1s;
 }
-#home_profile.bb:hover::after, #home_profile.bb:hover::before {
+.bb:hover::after, .bb:hover::before {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -368,195 +376,25 @@ div.infinite_roll{
 *::after {
   box-sizing: border-box;
 }
-/*====Edit info====
-#home_edit .jumbotron{
-    background: #fff;
-}
-
-#home_edit h1{
-    font-family: Raleway;
-    font-size: 35px;
-    font-weight: 400;
-    text-align: center;
-}
-
-#home_edit{
-    -webkit-font-smoothing: antialiased;
-    border: none;
-}
-
-.transition, form button, form .question label, form .question input[type="text"] {
-  -moz-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
-  -o-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
-  -webkit-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
-  transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
-}
 
 
-form {
-  position: relative;
-  display: inline-block;
-  max-width: 700px;
-  min-width: 500px;
-  padding: 10px 10px;
-  background-color: white;
-  box-sizing: border-box;
-  margin: 30px 0px;
-  left: 25%;
-  -moz-transform: translate(-50%, 0);
-  -ms-transform: translate(-50%, 0);
-  -webkit-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
-}
-
-#home_edit form button {
-  margin-top: 35px;
-  background-color: white;
-  border: none;
-  line-height: 0;
-  font-size: 22px;
-  box-sizing: border-box;
-  display: inline-block;
-  padding: 20px 15px;
-  color: #000;
-  font-weight: 100;
-  letter-spacing: 0.01em;
-  position: relative;
-  z-index: 5;
-  opacity: 1;
-}
-
-#home_edit a{
-    color: #000;
-}
-
-#home_edit a:before{
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  background-color: #000;
-  visibility: hidden;
-  -webkit-transform: scaleX(100%);
-  transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
-}
-
-#home_edit a:hover:before{
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-}
-
-form button:hover, form button:focus {
-    text-decoration: none;
-  color: cadetblue;
-  background-color: #fff ;
-}
-form .question {
-  position: relative;
-  padding: 10px 0;
-}
-form .question:first-of-type {
-  padding-top: 0;
-}
-form .question:last-of-type {
-  padding-bottom: 0;
-}
-form .question label {
-  color: cadetblue;
-  font-weight: 100;
-  letter-spacing: 0.01em;
-  font-size: 17px;
-  padding: 10px 15px;
-  display: block;
-  position: absolute;
-  margin-top: -40px;
-  z-index: 2;
-  pointer-events: none;
-}
-form .question input[type="text"] {
-  appearance: none;
-  background-color: none;
-  border: none;
-  font-size: 17px;
-  width: 100%;
-  display: block;
-  padding: 10px 15px;
-  color: cadetblue;
-  font-weight: 100;
-  letter-spacing: 0.01em;
-  position: relative;
-  z-index: 1;
-}
-form .question input[type="text"]:focus {
-  background: #fff;
-  color: #000;
-  margin-top: 30px;
-  border-bottom: 1px;
-  border-bottom-color: black;
-}
-form .question input[type="text"]:valid {
-  margin-top: 30px;
-}
-form .question input[type="text"]:focus ~ label {
-  -moz-transform: translate(0, -35px);
-  -ms-transform: translate(0, -35px);
-  -webkit-transform: translate(0, -35px);
-  transform: translate(0, -35px);
-}
-form .question input[type="text"]:valid ~ label {
-  text-transform: uppercase;
-  font-style:oblique;
-  -moz-transform: translate(5px, -35px) scale(0.6);
-  -ms-transform: translate(5px, -35px) scale(0.6);
-  -webkit-transform: translate(5px, -35px) scale(0.6);
-  transform: translate(5px, -35px) scale(0.6);
-}
-*/
-/*Fill form First time*/
+/*Fill form*/
 #new_form{
     background-color: #202544;
 }
 
 .form_fill{
-    color: #f23b66;
+    color: #202544;
     border: none;
     font-family: Raleway;
     font-size: 100px;
     font-weight: 600;
-    opacity: 0.2;
+    background-color: rgba(116, 153, 170, 0.5);
     height: 150px;
     width: 100%;
 }
 
-.form_submit{
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  display: inline-block;
-  z-index: 1;
-  padding: 10px 22px;
-  font-family: Raleway, sans-serif;
-  font-size: 1em;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.75);
-  cursor: pointer;
-  -webkit-transition: all .5s;
-          transition: all .5s;
-}
 
-.form_submit:hover {
-  background: rgba(255, 255, 255, 0.25);
-  border: 1px solid #f23b66;
-  border-color: #f23b66;
-  color: #f23b66;
-  text-decoration: underline;
-}
 
 /*
 .blink{
@@ -581,4 +419,78 @@ form .question input[type="text"]:valid ~ label {
 */
 input{
     border: none;
+    outline: none;
+}
+
+input:focus{
+    border: none;
+    outline: none;
+}
+
+/*====Edit info====*/
+#home_edit{
+    background-color: #202544;
+}
+
+#home_edit .form_fill{
+    font-size: 70px; 
+}
+
+input[type='text']:focus,input[type='number']:focus{
+ color: #fff;
+ outline:none;
+ font-weight: 200;
+}
+
+#home_edit p{
+    margin-top: 8px;
+    color: #f23b66;
+    font-family: Raleway, Open Sans;
+    font-size: 43px;
+    font-weight: 200;
+}
+
+#new_form p{
+    margin-top: 8px;
+    text-align: left;
+    color: #f23b66;
+    font-family: Raleway, Open Sans;
+    font-size: 43px;
+    font-weight: 200;
+}
+
+
+.anchor_submit{
+    
+    color: #f23b66;
+    text-align: left;
+    background: none;
+    background-color: transparent;
+    border: none;
+    font-size: 50px;
+     float: left;
+    
+}
+
+.anchor_submit:hover{
+    color: #fff;
+    border: none;
+}
+
+.anchor_submit:active{
+    color: #a0a0a0;
+    border: none;
+    outline: 0;
+}
+
+button:focus{
+    border: none;
+    outline: 0;
+}
+
+::selection {
+  background: #f23b66; /* WebKit/Blink Browsers */
+}
+::-moz-selection {     
+  background: #f23b66; /* Gecko Browsers */
 }

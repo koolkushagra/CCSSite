@@ -1,5 +1,6 @@
 var facebook = require('./facebook');
 var User = require('../models/user');
+var local = require('./local');
 
 module.exports = function(passport){
 
@@ -16,7 +17,7 @@ module.exports = function(passport){
         });
     });
 
-
+    local(passport);
     facebook(passport);
 
 }
