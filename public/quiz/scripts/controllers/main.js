@@ -8,14 +8,27 @@
  * Controller of the testApp
  */
 angular.module('testApp')
-  .controller('MainCtrl', function ($scope, $http, $route) {
+  .controller('MainCtrl', function ($scope, $http, $route, $timeout, $location) {
     $scope.totalQuestions = 0;
     $scope.attemptedQuestions = 0;
     $scope.unattemptedQuestions = 0;
     $scope.percentAnswered = $scope.attemptedQuestions/$scope.totalQuestions*100 + '%';
     $scope.currentQuestionNumber = 0;
     $scope.$route = $route;
-
+    //$scope.timeToSubmit = 902000;
+    $scope.setTime = false;
+    if($scope.setTime)
+    {
+    	$scope.techOne = true;
+    	$scope.nonTechOne = false;
+    	$scope.timeToSubmit = 902000;
+    }
+    else
+    {
+    	$scope.techOne = false;
+    	$scope.nonTechOne = true;
+    	$scope.timeToSubmit = 602000;	
+    }
     $scope.questionPaper = [];
     $scope.currentQuestion = [];
 
@@ -24,6 +37,9 @@ angular.module('testApp')
 	     $scope.questionPaper = response.data;
 	     $scope.currentQuestion = $scope.questionPaper[0];
 	     $scope.totalQuestions = $scope.unattemptedQuestions = $scope.questionPaper.length;
+	     for (var i = $scope.questionPaper.length - 1; i >= 0; i--) {
+				$scope.questionPaper[i].qno = i+1;
+		}
 	  }, function(response) {
 	    $scope.questionPaper = null;
   	});
@@ -70,6 +86,10 @@ angular.module('testApp')
     function(){});
     console.log("Check");
     window.location.replace("/home");
-};
+	};
+
+	$timeout(function() {
+		$scope.submit();
+	}, $scope.timeToSubmit);
 
   });
