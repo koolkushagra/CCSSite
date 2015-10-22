@@ -5,6 +5,9 @@ module.exports = mongoose.model('User',{
 	fb: {
 		email: String,
 		display_name: String,
+		photo: String,
+		id: String,
+		access_token: String,
 	},
 	bio:{
 		info1: String,

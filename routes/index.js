@@ -70,8 +70,7 @@ module.exports = function(passport){
           user.reg_no = req.body.reg_no;
           user.save();
         });
-      var newAnsw = new Answers({reg_no: req.body.reg_no});
-      newAnsw.save();
+
       }
     );
 
@@ -166,7 +165,7 @@ if(req.user.crea_taken == false)
   });
 
   router.get('/begin', function(req, res) {
-    res.render('signin.ejs');
+    res.render('signin.ejs',{message: req.flash('message')});
   });
 
   router.post('/quiz/correct',function (req, res) {
@@ -205,27 +204,31 @@ if(req.user.crea_taken == false)
       })
   );
 
-  router.post('/login',function(req, res){
-    console.log(req.body);
-  });
+  router.post('/login', passport.authenticate('login', {
+		successRedirect: '/home',
+		failureRedirect: '/begin',
+		failureFlash : true
+	}));
 
-  router.post('/signup',function(req, res){
-    console.log(req.body);
-  });
+  router.post('/signup', passport.authenticate('signup', {
+  		successRedirect: '/home',
+  		failureRedirect: '/begin',
+  		failureFlash : true
+  	}));
 
 
   router.get('/quiz/getdata',isAuthenticated,function(req, res){
     switch(req.session.f_type){
       case 1:
-      //  shuffleArray(techQuizData);
+       shuffleArray(techQuizData);
         res.json(techQuizData);
         break;
       case 2:
-    //  shuffleArray(mangQuizData);
+      shuffleArray(mangQuizData);
       res.json(mangQuizData);
         break;
       case 3:
-    //  shuffleArray(creaQuizData);
+      shuffleArray(creaQuizData);
       res.json(creaQuizData);
         break;
     }

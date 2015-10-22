@@ -21,6 +21,11 @@
 </head>
 <body id="new_form">
 <div class="container">
+  <%if(message.length > 0){%>
+    <div class="alert alert-warning" role="alert">
+  		<%=message%>
+  	</div>
+    <%}%>
 <div class = "row">
     <div class="col-lg-6 col-md-6 col-sm-6">
 
@@ -59,15 +64,19 @@
 								</div>
 								<div class="form-group">
 										<label class="form-label" for="regno">Registration number</label>
-										<input type="text" class="form-control" id="username" name="username" placeholder="Registration number" tabindex="1" required>
+										<input type="text" class="form-control" id="username" name="username" placeholder="Registration number" tabindex="2" required>
 								</div>
 								<div class="form-group">
 										<label class="form-label" for="email">Email</label>
-										<input type="email" class="form-control" id="email" name="email" placeholder="Email" tabindex="2" required>
+										<input type="email" class="form-control" id="email" name="email" placeholder="Email" tabindex="3" required>
+								</div>
+                <div class="form-group">
+										<label class="form-label" for="phone_no">Email</label>
+										<input type="number" class="form-control" id="phone_no" name="phone_no" placeholder="Phone No" tabindex="4" required>
 								</div>
 								<div class="form-group">
 										<label class="form-label" for="password">Password</label>
-										<input type="password" class="form-control" id="password" name="password" placeholder="Password" tabindex="3" required>
+										<input type="password" class="form-control" id="password" name="password" placeholder="Password" tabindex="5" required>
 								</div>
 								<div class="form-group">
                                     <div class="row">

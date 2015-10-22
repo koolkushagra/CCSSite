@@ -1,5 +1,6 @@
 var LocalStrategy  = require('passport-local').Strategy;
 var User = require('../models/user');
+var Answers = require('../models/answers.js');
 var bCrypt = require('bcrypt-nodejs');
 
 module.exports = function(passport){
@@ -10,21 +11,17 @@ module.exports = function(passport){
         function(req, username, password, done) {
             User.findOne({ 'reg_no' :  username },
                 function(err, user) {
-                    // In case of any error, return using the done method
                     if (err)
                         return done(err);
-                    // Username does not exist, log the error and redirect back
                     if (!user){
                         console.log('User Not Found with username '+username);
                         return done(null, false, req.flash('message', 'User Not found.'));
                     }
-                    // User exists but wrong password, log the error
                     if (!isValidPassword(user, password)){
                         console.log('Invalid Password');
                         return done(null, false, req.flash('message', 'Invalid Password')); // redirect back to login page
                     }
-                    // User and password both match, return user from done method
-                    // which will be treated like success
+
                     return done(null, user);
                 }
             );
@@ -39,7 +36,6 @@ module.exports = function(passport){
           function(req, username, password, done) {
 
               findOrCreateUser = function(){
-                  // find a user in Mongo with provided username
                   User.findOne({ 'reg_no' :  username }, function(err, user) {
                       // In case of any error, return using the done method
                       if (err){
@@ -58,9 +54,13 @@ module.exports = function(passport){
                           // set the user's local credentials
                           newUser.reg_no = username;
                           newUser.password = createHash(password);
-                          newUser.email = req.param('email');
-                          newUser.firstName = req.param('firstName');
-                          newUser.lastName = req.param('lastName');
+                          newUser.fb.email = req.param('email');
+                          newUser.fb.display_name = req.param('name');
+                				  newUser.isFemale = req.param('sex');
+													newUser.phone_no = req.param('phone_no');
+													newUser.bio.info1 = req.param('message')[0];
+													newUser.bio.info2 = req.param('message')[1];
+													newUser.bio.info3 = req.param('message')[2];
 
                           // save the user
                           newUser.save(function(err) {
@@ -68,6 +68,8 @@ module.exports = function(passport){
                                   console.log('Error in Saving user: '+err);
                                   throw err;
                               }
+															var newAnsw = new Answers({'reg_no': username});
+												      newAnsw.save();
                               console.log('User Registration succesful');
                               return done(null, newUser);
                           });
