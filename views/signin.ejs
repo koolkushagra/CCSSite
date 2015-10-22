@@ -2,39 +2,39 @@
 <html>
 <head>
   <title>CCSSite</title>
- <!-- 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">  
+ <!-- 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
   	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> -- load fontawesome -->
-    
-    <link rel="stylesheet" href="public/stylesheets/bootstrap.css">
-    <link rel="stylesheet" href="public/stylesheets/bootstrap-theme.css">
+
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="/stylesheets/bootstrap-theme.css">
             <!--stylesheets-->
-    <link rel="stylesheet" href="public/stylesheets/reg_style.css">
-    <link rel="stylesheet" type="text/css" href="public/fonts/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="public/stylesheets/ionicons.min.css">
-    
-    
+    <link rel="stylesheet" href="/stylesheets/reg_style.css">
+    <link rel="stylesheet" type="text/css" href="/fonts/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/stylesheets/ionicons.min.css">
+
+
   	<style>
   		body{ padding-top:40px; }
   	</style>
 
-    
+
 </head>
 <body id="new_form">
 <div class="container">
 <div class = "row">
     <div class="col-lg-6 col-md-6 col-sm-6">
-        
+
     <div class="sign_in">
-    <h1>Login</h1>    
+    <h1>Login</h1>
     </div>
-        
-      <form action="/first-time" method="post">
+
+      <form action="/login" method="post">
         <div class="form-group">
         <div id="email" class="blink">
-        <input type="number" class="form-control" id="inputPhone" autofocus="true" placeholder="Phone no." name="phone_no">
+        <input type="text" class="form-control" id="inputPhone" autofocus="true" placeholder="Registration no." name="username">
         </div>
         <div id="email">
-        <input type="text" class= "form-control" id= "inputRegNo" placeholder="Registration no." name="reg_no">
+        <input type="password" class= "form-control" id= "inputRegNo" placeholder="password" name="password">
         </div>
     </div>
 
@@ -42,24 +42,24 @@
         <div class="col-md-6">
         <p>I am ready to register now</p>
         </div>
-                 
-                 
+
+
         <div class="col-md-6 left">
         <button class="anchor_submit" type="submit"> ></button>
         </div>
-        </div>  
+        </div>
      </form>
     </div>
-    
+
     <div class="col-lg-6 col-md-6 col-sm-6">
-      <form id="login-form" class="form" action="#" method="POST" role="form">
+      <form id="login-form" class="form" action="/signup" method="POST" role="form">
 								<div class="form-group">
 										<label class="form-label" for="name">Name</label>
 										<input type="text" class="form-control" id="name" autofocus="true" name="name" placeholder="Name" tabindex="1" required>
 								</div>
 								<div class="form-group">
 										<label class="form-label" for="regno">Registration number</label>
-										<input type="text" class="form-control" id="name" name="name" placeholder="Registration number" tabindex="1" required>
+										<input type="text" class="form-control" id="username" name="username" placeholder="Registration number" tabindex="1" required>
 								</div>
 								<div class="form-group">
 										<label class="form-label" for="email">Email</label>
@@ -67,16 +67,16 @@
 								</div>
 								<div class="form-group">
 										<label class="form-label" for="password">Password</label>
-										<input type="password" class="form-control" id="passoword" name="password" placeholder="Password" tabindex="3" required>
+										<input type="password" class="form-control" id="password" name="password" placeholder="Password" tabindex="3" required>
 								</div>
 								<div class="form-group">
                                     <div class="row">
                                         <div class="col-md-3 col-sm-6"></div>
                                     </div>
-									<input id='agree_m' name='agree' type='checkbox'>
-                                    <label for='agree'>Male</label>
-                                    <input id='agree_f' name='agree' type='checkbox'>
-                                    <label for='agree'>Female</label>
+									<input id='agree_m' name='sex' type='radio' value="false">
+                  <label for='agree_m'>Male</label>
+                  <input id='agree_f' name='sex' type='radio' value='true'>
+                  <label for='agree_f'>Female</label>
 								</div>
 								<div class="form-group">
 										<label class="form-label" for="info1"></label>
@@ -101,8 +101,8 @@
 
 </div>
 </div>
-    
-    
+
+
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="public/stylesheets/reg_style.js"></script>
     <script src="public/media_js/bootstrap.js"></script>

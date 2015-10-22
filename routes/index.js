@@ -165,6 +165,10 @@ if(req.user.crea_taken == false)
     res.redirect('/');
   });
 
+  router.get('/begin', function(req, res) {
+    res.render('signin.ejs');
+  });
+
   router.post('/quiz/correct',function (req, res) {
     console.log(req.body);
     process.nextTick(function(){
@@ -200,6 +204,15 @@ if(req.user.crea_taken == false)
         failureRedirect : '/'
       })
   );
+
+  router.post('/login',function(req, res){
+    console.log(req.body);
+  });
+
+  router.post('/signup',function(req, res){
+    console.log(req.body);
+  });
+
 
   router.get('/quiz/getdata',isAuthenticated,function(req, res){
     switch(req.session.f_type){

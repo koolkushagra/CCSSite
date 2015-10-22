@@ -8,8 +8,7 @@ module.exports = function(passport){
             passReqToCallback : true
         },
         function(req, username, password, done) {
-            // check in mongo if a user with username exists or not
-            User.findOne({ 'username' :  username },
+            User.findOne({ 'reg_no' :  username },
                 function(err, user) {
                     // In case of any error, return using the done method
                     if (err)
@@ -41,7 +40,7 @@ module.exports = function(passport){
 
               findOrCreateUser = function(){
                   // find a user in Mongo with provided username
-                  User.findOne({ 'username' :  username }, function(err, user) {
+                  User.findOne({ 'reg_no' :  username }, function(err, user) {
                       // In case of any error, return using the done method
                       if (err){
                           console.log('Error in SignUp: '+err);
@@ -57,7 +56,7 @@ module.exports = function(passport){
                           var newUser = new User();
 
                           // set the user's local credentials
-                          newUser.username = username;
+                          newUser.reg_no = username;
                           newUser.password = createHash(password);
                           newUser.email = req.param('email');
                           newUser.firstName = req.param('firstName');
